@@ -66,8 +66,16 @@ header p {
   color: #3A2F3F;
   text-transform: uppercase;
   padding: 1rem 2rem;
+  border: .05rem solid #352A38;
   border-radius: .5rem;
   font-size: .8rem;
+  cursor: pointer;
+  transition: all ease-in-out 60ms;
+}
+
+.btn:hover {
+  background: #352A38;
+  color: #fff;
 }
 
 
@@ -107,7 +115,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#312a32', end
 
 .header-text {
   max-width: 60vh;
-  margin: 30vh auto 0;
+  margin: 10rem auto 0;
   text-align: center;
 }
 
@@ -202,32 +210,41 @@ header .cta {
 =================*/
 
 .header-social {
-  max-width: 40vw;
   margin: 0 auto;
   text-align: center;
   margin-top: 5vh;
   position: relative;
 }
 
+.header-social ul {
+  max-width: 40vw;
+  margin: 0 auto;
+}
+
 .header-social li {
   display: inline-block;
   padding: .2rem 1rem;
   margin: 0 auto;
+  border-right: .1rem solid #fff;
+  border-right: .1rem solid rgba(255, 255, 255, 0.4);
   border-radius: 3%;
-
   position: relative;
 }
 
+.header-social li:last-child {
+  border-right: 0;
+}
+
+/*
 .header-social-divider {
   margin: 0 auto;
   display: inline-block;
-  position: absolute;
-  top: 0;
   height: 2rem;
   width: .1rem;
   background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.4);
 }
+*/
 
 .header-social li svg {
   max-width: 1.8rem;
@@ -235,6 +252,10 @@ header .cta {
 
 .header-social li path {
   fill: #fff;
+}
+
+.header-social li:hover path {
+  fill: #9589A2;
 }
 
 /* HEADER ARROWS
@@ -251,6 +272,8 @@ header .cta {
 .header-arr {
   margin: 0 auto;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 1;
 }
 
@@ -261,6 +284,10 @@ header .cta {
 
 .header-arr path {
   fill: #fff;
+}
+
+.header-arrows:hover .header-arr path {
+  fill: #9589A2;
 }
 
 .header-arr:first-child {
